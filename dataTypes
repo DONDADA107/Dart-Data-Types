@@ -1,0 +1,43 @@
+// Dart program demonstrating data types and an inventory management system
+
+void main() {
+  // Example of int data type
+  int quantity = 10;
+
+  // Example of double data type
+  double price = 19.99;
+
+  // Example of String data type
+  String productName = "Widget";
+
+  // Example of List data type
+  List<String> productsInStock = ["Widget", "Gadget", "Thingamabob"];
+
+  // Example of Map data type
+  Map<String, double> productPrices = {
+    "Widget": 19.99,
+    "Gadget": 29.99,
+    "Thingamabob": 14.99
+  };
+
+  // Function to display product information
+  void displayProductInfo(String product) {
+    if (productsInStock.contains(product)) {
+      print("Product: $product");
+      print("Price: \$${productPrices[product]}");
+      print("Quantity in stock: $quantity");
+    } else {
+      print("Product not found.");
+    }
+  }
+
+  // Example of using each data type
+  print("Product: $productName");
+  print("Price: \$${price.toStringAsFixed(2)}");
+  print("Quantity in stock: $quantity");
+  print("Products in stock: $productsInStock");
+  print("Product prices: $productPrices");
+
+  // Example of using a function with parameters
+  displayProductInfo("Widget");
+}
